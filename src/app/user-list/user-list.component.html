@@ -1,0 +1,23 @@
+
+<div class="col-md-12">
+<router-outlet></router-outlet>
+</div>
+
+
+
+<div class="col-md-12">
+    <h3>User List</h3>
+  <div class="panel panel-default" *ngFor="let employee of employeeList" >
+    <div class="panel-heading">
+      <a [routerLink]="['details',employee.id ]"> <h3 class="panel-title">{{employee.project}}</h3>
+        </a> 
+    </div>
+    <div class="panel-body">
+      <p [innerText]="employee.id"></p> 
+      <p [innerText]="employee.name"></p> 
+      <p [innerText]="employee.domain"></p> 
+    </div>
+  </div>
+</div>
+
+
